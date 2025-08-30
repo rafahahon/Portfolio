@@ -64,7 +64,8 @@ html {
     font-family: "Oleo Script Swash Caps", system-ui;
 }
 
-.navbar a:hover, .navbar a.active {
+.navbar a:hover,
+.navbar a.active {
     text-decoration: underline;
 }
 
@@ -149,7 +150,8 @@ html {
     right: 0;
 }
 
-.sobre-paragrafo, .sobre-titulo {
+.sobre-paragrafo,
+.sobre-titulo {
     background-color: var(--branco);
     padding: 30px 20px;
     border-radius: 15px;
@@ -203,21 +205,62 @@ html {
 
 .cards {
     width: 70%;
-    height: auto;
+    height: 250px;
     background-color: var(--tom-escuro);
     margin: 0 auto 160px auto;
     display: flex;
-    align-items: center;
+    align-items: stretch;
     justify-content: space-around;
     flex-wrap: wrap;
     flex-direction: row;
 }
 
 .card {
-    max-width: 30%;
-    max-height: 200px;
-    background-color: var(--vermelho);
+    max-width: 70%;
+    max-height: 250px;
+    background-color: var(--tom-escuro);
     margin: 10px;
+    flex: 0.4;
+}
+
+.img-card {
+    width: 100%;
+    max-height: 250px;
+    display: block;
+    margin: auto;
+    border-radius: 30px;
+}
+
+.info-card {
+    color: var(--branco);
+    width: 100%;
+    height: 100%;
+    font-size: 15px;
+    top: 0;
+    left: 0;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+    border-radius: 30px;
+    gap: 2px;
+    background: rgba(133, 77, 77, 0.5);
+}
+
+.info-card h2 {
+    font-family: "Oleo Script Swash Caps", system-ui;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    transition: 0.4s;
+
+    .info-card {
+        transition: 0.5s;
+        visibility: visible;
+    }
 }
 
 .contatos {
@@ -229,10 +272,11 @@ html {
     position: relative;
 }
 
-.tipos-contatos{
+.tipos-contatos {
     flex-direction: column;
     display: flex;
     gap: 3rem;
+    margin-right: 300px;
 }
 
 .titulo-contatos {
@@ -260,35 +304,37 @@ html {
     bottom: 0;
 }
 
-.footer .botoes{
+.footer .botoes {
     display: flex;
-    align-items: self-start;
-    justify-content: space-around;
-    width: 800px;
+    position: absolute;
+    width: 1000px;
     height: 50px;
+    z-index: 1;
+    margin-top: 70px;
 }
 
-.botoes a{
-    width: 150px;
-    height: 80%;
+.botoes a {
+    width: 300px;
+    height: 60%;
     border-radius: 20px;
     text-decoration: none;
     display: flex;
     justify-content: space-around;
-    margin: 50px;
-    padding: 10px;
+    margin: 60px;
+    margin-left: 100px;
+    padding: 5px;
     background-color: var(--branco);
     font-family: "Oleo Script Swash Caps", system-ui;
     color: var(--vermelho);
     z-index: 1;
 }
 
-.botoes a:hover{
+.botoes a:hover {
     display: flex;
     justify-content: space-around;
-    align-items: center;
     color: var(--branco);
     background-color: var(--tom-escuro);
     border-radius: 20px;
     transition: .5s;
+    box-shadow: 0 0 8px rgba(255, 255, 255, 0.7)
 }
