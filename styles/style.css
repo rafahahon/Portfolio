@@ -169,7 +169,8 @@ html {
 
 .sobre-paragrafo {
     position: relative;
-    height: 300px;
+    height: 350px;
+    text-align: justify;
 }
 
 .projetos {
